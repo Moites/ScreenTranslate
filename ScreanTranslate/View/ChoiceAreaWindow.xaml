@@ -1,0 +1,38 @@
+﻿<Window x:Class="ScreanTranslate.View.ChoiceAreaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ScreanTranslate.View"
+        mc:Ignorable="d"
+        Title="ChoiceAreaWindow" 
+        Height="1080" 
+        Width="1920" 
+        WindowStyle="None" 
+        AllowsTransparency="True" 
+        Background="Black" 
+        Opacity="0.2" 
+        Topmost="True" 
+        WindowState="Maximized" 
+        Cursor="Pen"
+        ShowInTaskbar="False">
+
+    <Grid>
+        <Canvas x:Name="ChoiceCanvas" 
+                Background="#80000000" 
+                MouseDown="CanvasDown" 
+                MouseMove="CanvasMove" 
+                MouseUp="CanvasUp">
+            <Rectangle x:Name="AreaRectangle" 
+                       Stroke="White" 
+                       StrokeDashArray="5, 3"
+                       StrokeThickness="2" 
+                       Fill="#1AFFFFFF" 
+                       Visibility="{Binding IsVisible}" 
+                       Canvas.Left="{Binding Left}" 
+                       Canvas.Top="{Binding Top}" 
+                       Width="{Binding Width}" 
+                       Height="{Binding Height}"/>
+        </Canvas>
+    </Grid>
+</Window>
